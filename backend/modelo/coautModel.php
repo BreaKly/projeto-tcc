@@ -1,28 +1,28 @@
 <?php
-    class UserModelo {
-        private $userNome;
-        private $userEmail;
-        private $userSenha;
+    class coautModelo {
+        private $codArtigo;
+        private $nome;
+        private $emailCoautor;
 
-        public function setUserNome($userNome) {
-            $this->userNome = $userNome;
+        public function setCodArtigo($codArtigo) {
+            $this->codArtigo = $codArtigo;
         }
-        public function getUserNome() {
-            return $this->userNome;
-        }
-
-        public function setUserEmail($userEmail) {
-            $this->userEmail = $userEmail;
-        }
-        public function getUserEmail() {
-            return $this->userEmail;
+        public function getCodArtigo() {
+            return $this->codArtigo;
         }
 
-        public function setUserSenha($userSenha) {
-            $this->userSenha = $userSenha;
+        public function setNome($nome) {
+            $this->nome = $nome;
         }
-        public function getUserSenha() {
-            return $this->userSenha;
+        public function getNome() {
+            return $this->nome;
+        }
+
+        public function setEmailCoAutor($emailCoautor) {
+            $this->emailCoautor = $emailCoautor;
+        }
+        public function getEmailCoAutor() {
+            return $this->emailCoautor;
         }
 
 
