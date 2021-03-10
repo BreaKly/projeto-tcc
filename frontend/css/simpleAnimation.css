@@ -1,13 +1,15 @@
-h1#cad {  
-    animation: cad 2.4s ease;
+* {
+    margin: 0;
+    padding: 0;
 }
+
 p#atual {
     animation: atual 2.8s ease;
 }
 
 @keyframes cad {
     from {
-        transform: translateX(-150px);  
+        transform: translateX(-250px);  
     }
     to {
         transform: translateX(0px);  
@@ -15,7 +17,7 @@ p#atual {
 }
 @keyframes atual {
     from {
-        transform: translateY(500px);
+        transform: translateY(150px);
     }
     to {
         transform: translateY(0px);
