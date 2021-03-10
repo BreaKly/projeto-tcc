@@ -1,0 +1,23 @@
+h1#cad {  
+    animation: cad 2.4s ease;
+}
+p#atual {
+    animation: atual 2.8s ease;
+}
+
+@keyframes cad {
+    from {
+        transform: translateX(-150px);  
+    }
+    to {
+        transform: translateX(0px);  
+    }
+}
+@keyframes atual {
+    from {
+        transform: translateY(500px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
