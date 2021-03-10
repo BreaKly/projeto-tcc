@@ -4,22 +4,25 @@ require_once('../modelo/userModel.php');
 try {
         $conn = new Conexao("../Conexao/configDB.ini");
         $pdo = $conn->getPDO();
-        $user = new UserModelo();
+        $artigo = new artigoModelo();
 
-        $user->setUserNome($_POST['nome']);
-        $user->setUserEmail($_POST['email']);
-        $user->setUserSenha(sha1($_POST['senha']));
+        $artigo->setTitulo($_POST['titulo']);
+        $artigo->setNatureza($_POST['natureza']);
+        $artigo->setAutPrinc(($_POST['autPrinc']));
+        $artigo->setEmailAutPrinc(($_POST['emailAutPrinc']));
 
-        $inserir = $pdo->prepare("INSERT INTO userinfo(userNome, userEmail, userSenha) 
-        VALUES(:n, :e, :s)"); 
+        $inserir = $pdo->prepare("INSERT INTO artigo(Titulo, Natureza, AutPrinc, EmailAutPrinc) 
+        VALUES(:t, :n, :ap, :eap)"); 
 
-        $userNome = $user->getUserNome();
-        $userEmail = $user->getUserEmail();
-        $userSenha = $user->getUserSenha();
+        $artigoTitulo = $user->getTitulo();
+        $artigoNatureza = $user->getNatureza();
+        $artigoAutPrinc = $user->getAutPrinc();
+        $artigoEmailAutPrinc = $user->getEmailAutPrinc();
 
-        $inserir->bindValue(":n", $userNome);
-        $inserir->bindValue(":e", $userEmail);
-        $inserir->bindValue(":s", $userSenha);
+        $inserir->bindValue(":t", $artigoTitulo);
+        $inserir->bindValue(":n", $artigoNatureza);
+        $inserir->bindValue(":ap", $artigoAutPrinc);
+        $inserir->bindValue(":eap", $artigoEmailAutPrinc);
 
         if($inserir->execute()) {
             echo 
