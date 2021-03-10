@@ -1,28 +1,21 @@
 <?php
-    class UserModelo {
-        private $userNome;
-        private $userEmail;
-        private $userSenha;
+    class responsavelModelo {
+        private $nome;
+        private $email;
+       
 
-        public function setUserNome($userNome) {
-            $this->userNome = $userNome;
+        public function setNome($nome) {
+            $this->nome = $nome;
         }
-        public function getUserNome() {
-            return $this->userNome;
-        }
-
-        public function setUserEmail($userEmail) {
-            $this->userEmail = $userEmail;
-        }
-        public function getUserEmail() {
-            return $this->userEmail;
+        public function getNome() {
+            return $this->nome;
         }
 
-        public function setUserSenha($userSenha) {
-            $this->userSenha = $userSenha;
+        public function setEmail($email) {
+            $this->email = $email;
         }
-        public function getUserSenha() {
-            return $this->userSenha;
+        public function getEmail() {
+            return $this->email;
         }
 
 

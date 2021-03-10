@@ -1,28 +1,35 @@
 <?php
-    class UserModelo {
-        private $userNome;
-        private $userEmail;
-        private $userSenha;
+    class tccModelo {
+        private $codProj;
+        private $tituloTcc;
+        private $autorTcc;
+        private $situacao;
 
-        public function setUserNome($userNome) {
-            $this->userNome = $userNome;
+        public function setCodProj($codProj) {
+            $this->codProj = $codProj;
         }
-        public function getUserNome() {
-            return $this->userNome;
-        }
-
-        public function setUserEmail($userEmail) {
-            $this->userEmail = $userEmail;
-        }
-        public function getUserEmail() {
-            return $this->userEmail;
+        public function getCodProj() {
+            return $this->codProj;
         }
 
-        public function setUserSenha($userSenha) {
-            $this->userSenha = $userSenha;
+        public function setTituloTcc($tituloTcc) {
+            $this->tituloTcc = $tituloTcc;
         }
-        public function getUserSenha() {
-            return $this->userSenha;
+        public function getTituloTcc() {
+            return $this->tituloTcc;
+        }
+
+        public function setAutorTcc($autorTcc) {
+            $this->autorTcc = $autorTcc;
+        }
+        public function getAutorTcc() {
+            return $this->autorTcc;
+        }
+        public function setSituacao($situacao) {
+            $this->situacao=$situacao;
+        }
+        public function getSituacao() {
+            return $this->situacao;
         }
 
 

@@ -1,28 +1,44 @@
 <?php
-    class UserModelo {
-        private $userNome;
-        private $userEmail;
-        private $userSenha;
+    class projetoModelo {
+        private $codigo;
+        private $codResp;
+        private $dataInicio;
+        private $dataFim;
+        private $situAtual;
+    
+ 
 
-        public function setUserNome($userNome) {
-            $this->userNome = $userNome;
+        public function setCodigo($codigo) {
+            $this->codigo = $codigo;
         }
-        public function getUserNome() {
-            return $this->userNome;
-        }
-
-        public function setUserEmail($userEmail) {
-            $this->userEmail = $userEmail;
-        }
-        public function getUserEmail() {
-            return $this->userEmail;
+        public function getCodigo() {
+            return $this->codigo;
         }
 
-        public function setUserSenha($userSenha) {
-            $this->userSenha = $userSenha;
+        public function setCodResp($codResp) {
+            $this->codResp = $codResp;
         }
-        public function getUserSenha() {
-            return $this->userSenha;
+        public function getCodResp() {
+            return $this->codResp;
+        }
+
+        public function setDataInicio($dataInicio) {
+            $this->dataInicio = $dataInicio;
+        }
+        public function getDataInicio() {
+            return $this->dataInicio;
+        }
+        public function setDataFim($dataFim) {
+            $this->dataFim = $dataFim;
+        }
+        public function getDataFim() {
+            return $this->dataFim;
+        }
+        public function setSituAtual($situAtual) {
+            $this->$situAtual;
+        }
+        public function getSituAtual() {
+            return $this->situAtual;
         }
 
 
