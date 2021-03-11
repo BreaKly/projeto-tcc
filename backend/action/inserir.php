@@ -40,5 +40,5 @@ try {
         }
     } catch(PDOException $e) {
         echo "Surgiu um erro inesperado relacionado ao Banco de Dados: ".$e->getMessage();
-    }
+    } 
 ?>
