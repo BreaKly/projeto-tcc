@@ -35,7 +35,7 @@
             return $this->AutPrinc;
         }
         public function setEmailAutPrinc($emailautPrinc) {
-            $this->EmailautPrinc = $emailautPrinc;
+            $this->EmailAutPrinc = $emailautPrinc;
         }
         public function getEmailAutPrinc() {
             return $this->EmailAutPrinc;

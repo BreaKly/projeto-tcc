@@ -32,7 +32,7 @@
             $modeloResponsavel = $sth->fetchAll(PDO::FETCH_CLASS, "responsavelModelo");
             $modeloTcc = $sth->fetchAll(PDO::FETCH_CLASS, "tccModelo");
 
-            echo "<a href='registrar.php' class='mt-2 ms-2 btn btn-dark' title='Home'><i class='fas fa-home'></i></a>";
+            echo "<a href='home.php' class='mt-2 ms-2 btn btn-dark' title='Home'><i class='fas fa-home'></i></a>";
 
             echo "<div class='p-2 table-responsive'>
                     <table class='table table-dark table-hover'>
@@ -129,7 +129,6 @@
                 echo "</tr>";
             }
             echo "</table>
-            <a href='registrar.php'; class= 'mt-5 btn btn-primary'>HOME</a>
             </div>";
         } catch(PDOException $e){
              echo ("Ocorreu um erro inesperado: {$e->getMessage()}");
