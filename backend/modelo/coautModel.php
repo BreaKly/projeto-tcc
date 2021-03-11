@@ -1,28 +1,28 @@
 <?php
     class coautModelo {
-        private $codArtigo;
-        private $nome;
-        private $emailCoautor;
+        private $CodArtig;
+        private $Nome;
+        private $EmailCoaut;
 
-        public function setCodArtigo($codArtigo) {
-            $this->codArtigo = $codArtigo;
+        public function setCodArtig($codArtig) {
+            $this->CodArtig= $codArtig;
         }
-        public function getCodArtigo() {
-            return $this->codArtigo;
+        public function getCodArtig() {
+            return $this->CodArtig;
         }
 
         public function setNome($nome) {
-            $this->nome = $nome;
+            $this->Nome = $nome;
         }
         public function getNome() {
-            return $this->nome;
+            return $this->Nome;
         }
 
-        public function setEmailCoAutor($emailCoautor) {
-            $this->emailCoautor = $emailCoautor;
+        public function setEmailCoAut($emailCoaut) {
+            $this->EmailCoaut = $emailCoaut;
         }
-        public function getEmailCoAutor() {
-            return $this->emailCoautor;
+        public function getEmailCoAut() {
+            return $this->EmailCoaut;
         }
 
 

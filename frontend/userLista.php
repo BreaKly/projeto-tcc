@@ -66,10 +66,10 @@
                                 echo "<tr>";
             foreach($modeloCoaut as $item){                      
                 echo "<tr>";
-                echo "<td class='text-center'>{$item->getCodArtigo()}</td>";
+                echo "<td class='text-center'>{$item->getCodArtig()}</td>";
                 echo "<td class='text-center'>{$item->getNome()}</td>";
-                echo "<td class='text-center'>{$item->getEmailCoautor()}</td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getCodArtigo()}' class='btn btn-danger'>Apagar</a></td>";
+                echo "<td class='text-center'>{$item->getEmailCoaut()}</td>";
+                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getCodArtig()}' class='btn btn-danger'>Apagar</a></td>";
                 echo "</tr>";
                 }
         
@@ -85,12 +85,12 @@
                 echo "<tr>";
             foreach($modeloProjeto as $item){
                 echo "<tr>";                
-                echo "<td class='text-center'>{$item->getCodigo()}</td>";
+                echo "<td class='text-center'>{$item->getCodProj()}</td>";
                 echo "<td class='text-center'>{$item->getCodResp()}</td>";
                 echo "<td class='text-center'>{$item->getDataInicio()}</td>";
                 echo "<td class='text-center'>{$item->getDataFim()}</td>";
                 echo "<td class='text-center'>{$item->getSituAtual()}</td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getCodigo()}' class='btn btn-danger'>Apagar</a></td>";
+                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getCodProj()}' class='btn btn-danger'>Apagar</a></td>";
                 echo "</tr>";
                 }
                 
@@ -121,8 +121,8 @@
             foreach($modeloTcc as $item){
                 echo "<tr>";
                 echo "<td class='text-center'>{$item->getCodProj()}</td>";
-                echo "<td class='text-center'>{$item->getTituloTcc()}</td>";
-                echo "<td class='text-center'>{$item->getAutorTcc()}</td>";
+                echo "<td class='text-center'>{$item->getTituloTCC()}</td>";
+                echo "<td class='text-center'>{$item->getAutorTCC()}</td>";
                 echo "<td class='text-center'>{$item->getSituacao()}</td>";
                 echo "<td class='text-center'><a href='../backend/action/deletar.php?codProj={$item->getCodProj()}' class='btn btn-danger'>Apagar</a></td>";
                 echo "</tr>";
