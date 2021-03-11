@@ -27,7 +27,7 @@
                     <button type="submit" class='w-100 float-end btn btn-primary'>
                         <i class="fas fa-user-plus"></i>   CADASTRAR NOVO CO-AUTOR
                     </button>
-                    <a href='userLista.php' class='btn btn-outline-secondary w-100 mt-2' title='Função disponível apenas para administradores'>
+                    <a href='listaGeral.php' class='btn btn-outline-secondary w-100 mt-2' title='Função disponível apenas para administradores'>
                         <i class="fas fa-users"></i>   LISTA DE CO-AUTORES
                     </a>     
                 </div>   

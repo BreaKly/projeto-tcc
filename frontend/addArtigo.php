@@ -33,8 +33,8 @@
                     <button type="submit" class='w-100 float-end btn btn-primary'>
                         <i class="fas fa-user-plus"></i>   CADASTRAR NOVO ARTIGO
                     </button>
-                    <a href='registrar.php' class='mt-2 btn btn-secondary w-100' title='Home'><i class='fas fa-home'></i> HOME</a>
-                    <a href='userLista.php' class='btn btn-outline-secondary w-100 mt-2' title='Função disponível apenas para administradores'>
+                    <a href='home.php' class='mt-2 btn btn-secondary w-100' title='Home'><i class='fas fa-home'></i> HOME</a>
+                    <a href='listaGeral.php' class='btn btn-outline-secondary w-100 mt-2' title='Função disponível apenas para administradores'>
                         <i class="fas fa-users"></i>   LISTA DE ARTIGOS
                     </a>     
                 </div>   
