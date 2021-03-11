@@ -33,12 +33,7 @@
             $modeloTcc = $sth->fetchAll(PDO::FETCH_CLASS, "tccModelo");
 
             echo "<a href='home.php' class='mt-2 ms-2 btn btn-dark' title='Home'><i class='fas fa-home'></i></a>";
-            echo "<div class='dropdown'>
-                <button class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenuButton1'>
-                    Artigos
-                </button>
-            <ul class='dropdown-menu'>
-              <div class='p-2 table-responsive'>
+            echo "<div class='p-2 table-responsive'>
                     <table class='table table-dark table-hover'>
                             <tr>
                                 <th scope='col' class='text-center'>CÓDIGO DO PROJETO</th>
@@ -48,7 +43,6 @@
                                 <th scope='col' class='text-center'>EMAIL DO AUTOR PRINCIPAL</th>
                                 <th scope='col' class='text-center'>DELETAR</th>
                             </tr>";
-            echo '<li>';
             foreach($modeloArtigo as $item){
                 echo "<tr class='dropdown-item'>";
                     echo "<td class='text-center'>{$item->getCodArtigo()}</td>";
@@ -59,10 +53,6 @@
                     echo "<td class='text-center'><a href='../backend/action/deletar.php?codArtigo={$item->getCodArtigo()}' class='btn btn-danger'>Apagar</a></td>";
                 echo "</tr>";
             }
-            echo '</li>
-            </ul>
-            </div>';
-            
             echo "</table>
                     </div>";
                 echo "<div class='p-2 table-responsive'>
