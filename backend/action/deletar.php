@@ -7,7 +7,7 @@
         
         $codArtigo = $_GET['codArtigo'];
 
-        $comando = $pdo->prepare('DELETE FROM artigo WHERE codArtigo=:n');
+        $comando = $pdo->prepare('DELETE FROM artigo WHERE CodArtigo=:n');
         $comando->bindValue(":n", $codArtigo);
         if($comando->execute()) {
             echo "
