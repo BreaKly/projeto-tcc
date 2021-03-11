@@ -50,7 +50,7 @@
                             </tr>";
             echo '<li>';
             foreach($modeloArtigo as $item){
-                echo "<tr class'dropdown-item'>";
+                echo "<tr class='dropdown-item'>";
                     echo "<td class='text-center'>{$item->getCodArtigo()}</td>";
                     echo "<td class='text-center'>{$item->getTitulo()}</td>";
                     echo "<td class='text-center'>{$item->getNatureza()}</td>";
@@ -60,7 +60,6 @@
                 echo "</tr>";
             }
             echo '</li>
-            </div>
             </ul>
             </div>';
             
