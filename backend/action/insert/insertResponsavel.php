@@ -2,15 +2,14 @@
 require_once('../../Conexao/Conexao.class.php');
 require_once('../../modelo/responsavelModel.php');
 try {
-        $conn = new Conexao("../Conexao/configDB.ini");
+        $conn = new Conexao("../../Conexao/configDB.ini");
         $pdo = $conn->getPDO();
         $responsavel = new responsavelModelo();
 
         $responsavel->setNome($_POST['nome']);
         $responsavel->setEmail($_POST['email']);
 
-        $artigoPDO = $pdo->prepare("INSERT INTO responsavel(Nome, Email) 
-        VALUES(:n, :e)"); 
+        $respPDO = $pdo->prepare("INSERT INTO responsavel(Nome, Email) VALUES(:n, :e)"); 
 
         echo $responsavel->getNome();
 

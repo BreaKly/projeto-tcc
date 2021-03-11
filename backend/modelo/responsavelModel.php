@@ -1,5 +1,5 @@
 <?php
-    class responsavelModelo {
+    class ResponsavelModelo {
         private $Nome;
         private $Email;
        

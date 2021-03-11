@@ -13,7 +13,7 @@ try {
         $artigo->setAutPrinc($_POST['autPrinc']);
         $artigo->setEmailAutPrinc($_POST['emailAutPrinc']);
 
-        $artigoPDO = $pdo->prepare("INSERT INTO artigo(Titulo, Natureza, AutPrinc, EmailAutPrinc) 
+        $artigoPDO = $pdo->prepare("INSERT INTO projeto(CodProj, CodResp, DataInicio, DataFim, SituAtual) 
         VALUES(:t, :n, :ap, :eap)"); 
 
         $artigoTitulo = $artigo->getTitulo();

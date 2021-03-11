@@ -21,16 +21,15 @@
             $artigoModel = new ArtigoModelo();
             $coautModel = new coautModelo();
             $projetoModel = new projetoModelo();
-            $responsavelModel = new responsavelModelo();
+            $responsavelModel = new ResponsavelModelo();
             $tccModel = new tccModelo();
             
-            $sth = $pdo->prepare("SELECT * FROM artigo;");
-            $sth->execute();
-            $modeloArtigo = $sth->fetchAll(PDO::FETCH_CLASS, "ArtigoModelo");
-            $modeloCoaut = $sth->fetchAll(PDO::FETCH_CLASS, "coautModelo");
-            $modeloProjeto = $sth->fetchAll(PDO::FETCH_CLASS, "projetoModelo");
-            $modeloResponsavel = $sth->fetchAll(PDO::FETCH_CLASS, "responsavelModelo");
-            $modeloTcc = $sth->fetchAll(PDO::FETCH_CLASS, "tccModelo");
+            $sthArtigo = $pdo->prepare("SELECT * FROM artigo;");
+            $sthResponsavel = $pdo->prepare("SELECT * FROM responsavel;");
+            $sthArtigo->execute();
+            $sthResponsavel->execute();
+            $modeloArtigo = $sthArtigo->fetchAll(PDO::FETCH_CLASS, "ArtigoModelo");
+            $modeloResponsavel = $sthResponsavel->fetchAll(PDO::FETCH_CLASS, "ResponsavelModelo");
 
             echo "<a href='home.php' class='mt-2 ms-2 btn btn-dark' title='Home'><i class='fas fa-home'></i></a>";
             echo "<div class='p-2 table-responsive'>
@@ -63,6 +62,7 @@
                                     <th scope='col' class='text-center'>CÓDIGO DO ARTIGO</th>
                                     <th scope='col' class='text-center'>NOME DO COAUTOR</th>
                                     <th scope='col' class='text-center'>EMAIL DO CO AUTOR</th>
+                                    <th scope='col' class='text-center'>DELETAR</th>
                                 </tr>";
                                 echo "<tr>";
             foreach($modeloCoaut as $item){                      
@@ -73,7 +73,8 @@
                 echo "<td class='text-center'><a href='../backend/action/deletar.php?codArtig={$item->getCodArtig()}' class='btn btn-danger'>Apagar</a></td>";
                 echo "</tr>";
                 }
-        
+                echo "</table>
+                    </div>";
                 echo "<div class='p-2 table-responsive'>
                             <table class='table table-dark table-hover'>
                                     <tr>
@@ -82,8 +83,9 @@
                                         <th scope='col' class='text-center'>DATA DE INÍCIO</th>
                                         <th scope='col' class='text-center'>DATA DE FIM</th>
                                         <th scope='col' class='text-center'>SITUAÇÃO ATUAL</th>
+                                        <th scope='col' class='text-center'>DELETAR</th>
                                     </tr>";
-                
+            echo "<tr>";
             foreach($modeloProjeto as $item){
                 echo "<tr>";                
                 echo "<td class='text-center'>{$item->getCodProj()}</td>";
@@ -94,13 +96,15 @@
                 echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getCodProj()}' class='btn btn-danger'>Apagar</a></td>";
                 echo "</tr>";
                 }
-                
+                echo "</table>
+                    </div>";
                 
                 echo "<div class='p-2 table-responsive'>
                             <table class='table table-dark table-hover'>
                                     <tr>
                                         <th scope='col' class='text-center'>NOME DO RESPONSÁVEL</th>
                                         <th scope='col' class='text-center'>EMAIL DO RESPONSÁVEL</th>
+                                        <th scope='col' class='text-center'>DELETAR</th>
                                     </tr>";
                 echo "<tr>";
             foreach($modeloResponsavel as $item){
@@ -110,6 +114,8 @@
                 echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getNome()}' class='btn btn-danger'>Apagar</a></td>";
                 echo "</tr>";
                 }
+            echo "</table>
+                </div>";
                 echo "<div class='p-2 table-responsive'>
                             <table class='table table-dark table-hover'>
                                     <tr>
@@ -117,6 +123,7 @@
                                         <th scope='col' class='text-center'>TÍTULO TCC</th>
                                         <th scope='col' class='text-center'>AUTOR TCC</th>
                                         <th scope='col' class='text-center'>SITUAÇÃO DO TCC</th>
+                                        <th scope='col' class='text-center'>DELETAR</th>
                         </tr>";
                         echo "<tr>";
                 
