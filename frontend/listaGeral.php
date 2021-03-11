@@ -74,7 +74,8 @@
                 echo "</tr>";
                 }
         
-                echo "<div class='p-2 table-responsive'>
+                echo "<ul class='dropdown-menu'>
+                <div class='p-2 table-responsive'>
                             <table class='table table-dark table-hover'>
                                     <tr>
                                         <th scope='col' class='text-center'>CÓDIGO</th>
@@ -83,7 +84,7 @@
                                         <th scope='col' class='text-center'>DATA DE FIM</th>
                                         <th scope='col' class='text-center'>SITUAÇÃO ATUAL</th>
                                     </tr>";
-                echo "<tr>";
+                echo '<li class="dropdown-item">';
             foreach($modeloProjeto as $item){
                 echo "<tr>";                
                 echo "<td class='text-center'>{$item->getCodProj()}</td>";
@@ -94,6 +95,7 @@
                 echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getCodProj()}' class='btn btn-danger'>Apagar</a></td>";
                 echo "</tr>";
                 }
+                echo '</li>';
                 
                 echo "<div class='p-2 table-responsive'>
                             <table class='table table-dark table-hover'>
@@ -121,11 +123,11 @@
                 
             foreach($modeloTcc as $item){
                 echo "<tr>";
-                echo "<td class='text-center'>{$item->getCodProj()}</td>";
-                echo "<td class='text-center'>{$item->getTituloTCC()}</td>";
-                echo "<td class='text-center'>{$item->getAutorTCC()}</td>";
-                echo "<td class='text-center'>{$item->getSituacao()}</td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?codProj={$item->getCodProj()}' class='btn btn-danger'>Apagar</a></td>";
+                    echo "<td class='text-center'>{$item->getCodProj()}</td>";
+                    echo "<td class='text-center'>{$item->getTituloTCC()}</td>";
+                    echo "<td class='text-center'>{$item->getAutorTCC()}</td>";
+                    echo "<td class='text-center'>{$item->getSituacao()}</td>";
+                    echo "<td class='text-center'><a href='../backend/action/deletar.php?codProj={$item->getCodProj()}' class='btn btn-danger'>Apagar</a></td>";
                 echo "</tr>";
             }
             echo "</table>
