@@ -1,44 +1,44 @@
 <?php
     class projetoModelo {
-        private $codigo;
-        private $codResp;
-        private $dataInicio;
-        private $dataFim;
-        private $situAtual;
+        private $CodProj;
+        private $CodResp;
+        private $DataInicio;
+        private $DataFim;
+        private $SituAtual;
     
  
 
-        public function setCodigo($codigo) {
-            $this->codigo = $codigo;
+        public function setCodProj($codProj) {
+            $this->CodProj = $codProj;
         }
-        public function getCodigo() {
-            return $this->codigo;
+        public function getCodProj() {
+            return $this->CodProj;
         }
 
         public function setCodResp($codResp) {
-            $this->codResp = $codResp;
+            $this->CodResp = $codResp;
         }
         public function getCodResp() {
-            return $this->codResp;
+            return $this->CodResp;
         }
 
         public function setDataInicio($dataInicio) {
-            $this->dataInicio = $dataInicio;
+            $this->DataInicio = $dataInicio;
         }
         public function getDataInicio() {
-            return $this->dataInicio;
+            return $this->DataInicio;
         }
         public function setDataFim($dataFim) {
-            $this->dataFim = $dataFim;
+            $this->DataFim = $dataFim;
         }
         public function getDataFim() {
-            return $this->dataFim;
+            return $this->DataFim;
         }
         public function setSituAtual($situAtual) {
-            $this->$situAtual;
+            $this->SituAtual=$situAtual;
         }
         public function getSituAtual() {
-            return $this->situAtual;
+            return $this->SituAtual;
         }
 
 

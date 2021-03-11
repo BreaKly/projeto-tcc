@@ -1,35 +1,35 @@
 <?php
     class tccModelo {
-        private $codProj;
-        private $tituloTcc;
-        private $autorTcc;
-        private $situacao;
+        private $CodProj;
+        private $TituloTCC;
+        private $AutorTCC;
+        private $Situacao;
 
         public function setCodProj($codProj) {
-            $this->codProj = $codProj;
+            $this->CodProj = $codProj;
         }
         public function getCodProj() {
-            return $this->codProj;
+            return $this->CodProj;
         }
 
-        public function setTituloTcc($tituloTcc) {
-            $this->tituloTcc = $tituloTcc;
+        public function setTituloTCC($tituloTcc) {
+            $this->TituloTCC = $tituloTcc;
         }
-        public function getTituloTcc() {
-            return $this->tituloTcc;
+        public function getTituloTCC() {
+            return $this->TituloTCC;
         }
 
-        public function setAutorTcc($autorTcc) {
-            $this->autorTcc = $autorTcc;
+        public function setAutorTCC($autorTcc) {
+            $this->AutorTCC = $autorTcc;
         }
-        public function getAutorTcc() {
-            return $this->autorTcc;
+        public function getAutorTCC() {
+            return $this->AutorTCC;
         }
         public function setSituacao($situacao) {
-            $this->situacao=$situacao;
+            $this->Situacao=$situacao;
         }
         public function getSituacao() {
-            return $this->situacao;
+            return $this->Situacao;
         }
 
 

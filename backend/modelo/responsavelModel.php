@@ -1,21 +1,21 @@
 <?php
     class responsavelModelo {
-        private $nome;
-        private $email;
+        private $Nome;
+        private $Email;
        
 
         public function setNome($nome) {
-            $this->nome = $nome;
+            $this->Nome = $nome;
         }
         public function getNome() {
-            return $this->nome;
+            return $this->Nome;
         }
 
         public function setEmail($email) {
-            $this->email = $email;
+            $this->Email = $email;
         }
         public function getEmail() {
-            return $this->email;
+            return $this->Email;
         }
 
 
