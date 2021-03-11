@@ -48,9 +48,9 @@
                                 <th scope='col' class='text-center'>EMAIL DO AUTOR PRINCIPAL</th>
                                 <th scope='col' class='text-center'>DELETAR</th>
                             </tr>";
-            echo '<li class="dropdown-item">';
+            echo '<li>';
             foreach($modeloArtigo as $item){
-                echo "<tr>";
+                echo "<tr class'dropdown-item'>";
                     echo "<td class='text-center'>{$item->getCodArtigo()}</td>";
                     echo "<td class='text-center'>{$item->getTitulo()}</td>";
                     echo "<td class='text-center'>{$item->getNatureza()}</td>";
