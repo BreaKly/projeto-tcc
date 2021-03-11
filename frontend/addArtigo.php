@@ -17,8 +17,8 @@
                 </div>
                 <div>
                     <select class="form-select mb-3" name='natureza'>
-                        <option selected>RESUMO</option>
-                        <option value="2">COMPLETO</option>
+                        <option selected value='RESUMO'>RESUMO</option>
+                        <option value="COMPLETO">COMPLETO</option>
                     </select>
                 </div>
                 <div class='form-div form-floating mb-3'>
