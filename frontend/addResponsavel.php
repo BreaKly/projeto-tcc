@@ -16,17 +16,12 @@
             <form enctype='multipart/form-data' action='../backend/action/inserir.php' method='post' class='w-75'>
                 <div class='form-div form-floating mb-3'>
                     <input type='text' class='form-control' id='userNome' name='nome' placeholder='Nome para usuário' style='outline: none;' required>
-                    <label for='userNome'>Nome de usuário</label>
+                    <label for='userNome'>Nome do responsável</label>
                 </div>
                 <div class='form-div form-floating mb-3'>
                     <input type='email' class='form-control' id='userEmail' name='email' placeholder='nome@exemplo.com' required>
-                    <label for='userEmail'>Endereço de e-mail</label>
+                    <label for='userEmail'>Endereço de e-mail do responsável</label>
                 </div>
-                <div class='form-div form-floating mb-3'>
-                    <input type='password' class='form-control' id='userSenha' name='senha' placeholder='senha' required>
-                    <label for='userSenha'>Senha</label>
-                </div>
-                <div>
                     <button type="submit" class='w-100 float-end btn btn-primary'>
                         <i class="fas fa-user-plus"></i>   CADASTRAR
                     </button>

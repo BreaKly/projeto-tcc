@@ -13,7 +13,7 @@
             <p id='atual'class='ps-5'>cadastre-se, atualize-se</p>
         </div>
         <div class='w-50 d-flex justify-content-center align-items-center'>
-            <form enctype='multipart/form-data' action='../backend/action/inserir.php' method='post' class='w-75'>
+            <form enctype='multipart/form-data' action='../backend/action/insert/insertProjeto.php' method='post' class='w-75'>
                 <div class='form-div form-floating mb-3'>
                     <input type='text' class='form-control' id='userNome' name='nome' placeholder='Nome para usuário' style='outline: none;' required>
                     <label for='userNome'>Nome de usuário</label>

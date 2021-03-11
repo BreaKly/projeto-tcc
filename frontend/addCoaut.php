@@ -10,7 +10,7 @@
 <div class="d-flex vh-100">
         <div class='w-100 d-flex justify-content-center align-items-center flex-column'>
             <h1 id='cad' class='h2 fw-bolder ps-3 mb-2'>CADASTRO DE CO-AUTORES</h1>
-            <form enctype='multipart/form-data' action='../backend/action/inserir.php' method='post'>
+            <form enctype='multipart/form-data' action='../backend/action/insert/insertCoaut.php' method='post'>
                 <div class='form-div form-floating mb-3'>
                     <input type='text' class='form-control' id='codArtigo' name='codArtigo' placeholder='Título' style='outline: none;' required>
                     <label for='titulo'>Código do artigo</label>

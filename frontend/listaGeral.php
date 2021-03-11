@@ -21,8 +21,8 @@
             $artigoModel = new ArtigoModelo();
             $coautModel = new coautModelo();
             $projetoModel = new projetoModelo();
-            $responsavelModel = new tccModelo();
-            $tccModel = new responsavelModelo();
+            $responsavelModel = new responsavelModelo();
+            $tccModel = new tccModelo();
             
             $sth = $pdo->prepare("SELECT * FROM artigo;");
             $sth->execute();
