@@ -13,14 +13,8 @@ try {
         $artigo->setAutPrinc($_POST['autPrinc']);
         $artigo->setEmailAutPrinc($_POST['emailAutPrinc']);
 
-        $coaut->setCodArtig($_POST['codArtigo']);
-        $coaut->setNome($_POST['nomeCoat']);
-        $coaut->setEmailCoAut($_POST['emailCoaut']);
-
         $artigoPDO = $pdo->prepare("INSERT INTO artigo(Titulo, Natureza, AutPrinc, EmailAutPrinc) 
         VALUES(:t, :n, :ap, :eap)"); 
-        $coautPDO = $pdo->prepare("INSERT INTO coautor(CodArtig, Nome, EmailCoaut) 
-        VALUES(:ca, :n, :ec)"); 
 
         $artigoTitulo = $artigo->getTitulo();
         $artigoNatureza = $artigo->getNatureza();
