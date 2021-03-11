@@ -1,23 +1,32 @@
 <?php
 require_once('../Conexao/Conexao.class.php');
 require_once('../modelo/artigoModel.php');
+require_once('../modelo/coautModel.php');
 try {
         $conn = new Conexao("../Conexao/configDB.ini");
         $pdo = $conn->getPDO();
         $artigo = new ArtigoModelo();
+        $coaut = new CoautModelo();
 
         $artigo->setTitulo($_POST['titulo']);
         $artigo->setNatureza($_POST['natureza']);
         $artigo->setAutPrinc($_POST['autPrinc']);
         $artigo->setEmailAutPrinc($_POST['emailAutPrinc']);
 
+        $coaut->setCodArtig($_POST['codArtigo']);
+        $coaut->setNome($_POST['nomeCoat']);
+        $coaut->setEmailCoAut($_POST['emailCoaut']);
+
         $artigoPDO = $pdo->prepare("INSERT INTO artigo(Titulo, Natureza, AutPrinc, EmailAutPrinc) 
         VALUES(:t, :n, :ap, :eap)"); 
+        $coautPDO = $pdo->prepare("INSERT INTO coautor(CodArtig, Nome, EmailCoaut) 
+        VALUES(:ca, :n, :ec)"); 
 
         $artigoTitulo = $artigo->getTitulo();
         $artigoNatureza = $artigo->getNatureza();
         $artigoAutPrinc = $artigo->getAutPrinc();
         $artigoEmailAutPrinc = $artigo->getEmailAutPrinc();
+
 
         $artigoPDO->bindValue(":t", $artigoTitulo);
         $artigoPDO->bindValue(":n", $artigoNatureza);

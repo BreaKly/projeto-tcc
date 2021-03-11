@@ -1,5 +1,5 @@
 <?php
-    class coautModelo {
+    class CoautModelo {
         private $CodArtig;
         private $Nome;
         private $EmailCoaut;

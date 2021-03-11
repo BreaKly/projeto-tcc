@@ -12,15 +12,15 @@
             <h1 id='cad' class='h2 fw-bolder ps-3 mb-2'>CADASTRO DE CO-AUTORES</h1>
             <form enctype='multipart/form-data' action='../backend/action/inserir.php' method='post'>
                 <div class='form-div form-floating mb-3'>
-                    <input type='text' class='form-control' id='titulo' name='titulo' placeholder='Título' style='outline: none;' required>
+                    <input type='text' class='form-control' id='codArtigo' name='codArtigo' placeholder='Título' style='outline: none;' required>
                     <label for='titulo'>Código do artigo</label>
                 </div>
                 <div class='form-div form-floating mb-3'>
-                    <input type='text' class='form-control' id='natureza' name='natureza' placeholder='Natureza' required>
+                    <input type='text' class='form-control' id='natureza' name='nomeCoaut' placeholder='Natureza' required>
                     <label for='natureza'>Nome do co-autor</label>
                 </div>
                 <div class='form-div form-floating mb-3'>
-                    <input type='email' class='form-control' id='autPrinc' name='autPrinc' placeholder='Autor principal' required>
+                    <input type='email' class='form-control' id='emailCoaut' name='emailCoaut' placeholder='Autor principal' required>
                     <label for='autPrinc'>Email do co-autor</label>
                 </div>
                 <div>

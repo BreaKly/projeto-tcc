@@ -45,12 +45,12 @@
                             </tr>";
             foreach($modeloArtigo as $item){
                 echo "<tr>";
-                echo "<td class='text-center'>{$item->getCodArtigo()}</td>";
-                echo "<td class='text-center'>{$item->getTitulo()}</td>";
-                echo "<td class='text-center'>{$item->getNatureza()}</td>";
-                echo "<td class='text-center'>{$item->getAutPrinc()}</td>";
-                echo "<td class='text-center'>{$item->getEmailAutPrinc()}</td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getCodArtigo()}' class='btn btn-danger'>Apagar</a></td>";
+                    echo "<td class='text-center'>{$item->getCodArtigo()}</td>";
+                    echo "<td class='text-center'>{$item->getTitulo()}</td>";
+                    echo "<td class='text-center'>{$item->getNatureza()}</td>";
+                    echo "<td class='text-center'>{$item->getAutPrinc()}</td>";
+                    echo "<td class='text-center'>{$item->getEmailAutPrinc()}</td>";
+                    echo "<td class='text-center'><a href='../backend/action/deletar.php?codArtigo={$item->getCodArtigo()}' class='btn btn-danger'>Apagar</a></td>";
                 echo "</tr>";
             }
             echo "</table>
@@ -69,7 +69,7 @@
                 echo "<td class='text-center'>{$item->getCodArtig()}</td>";
                 echo "<td class='text-center'>{$item->getNome()}</td>";
                 echo "<td class='text-center'>{$item->getEmailCoaut()}</td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getCodArtig()}' class='btn btn-danger'>Apagar</a></td>";
+                echo "<td class='text-center'><a href='../backend/action/deletar.php?codArtig={$item->getCodArtig()}' class='btn btn-danger'>Apagar</a></td>";
                 echo "</tr>";
                 }
         
