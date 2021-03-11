@@ -11,7 +11,7 @@ try {
         $artigo->setAutPrinc(($_POST['autPrinc']));
         $artigo->setEmailAutPrinc(($_POST['emailAutPrinc']));
 
-        $artigo = $pdo->prepare("INSERT INTO artigo(Titulo, Natureza, AutPrinc, EmailAutPrinc) 
+        $artigoPDO = $pdo->prepare("INSERT INTO artigo(Titulo, Natureza, AutPrinc, EmailAutPrinc) 
         VALUES(:t, :n, :ap, :eap)"); 
 
         $artigoTitulo = $artigo->getTitulo();
@@ -19,12 +19,12 @@ try {
         $artigoAutPrinc = $artigo->getAutPrinc();
         $artigoEmailAutPrinc = $artigo->getEmailAutPrinc();
 
-        $inserir->bindValue(":t", $artigoTitulo);
-        $inserir->bindValue(":n", $artigoNatureza);
-        $inserir->bindValue(":ap", $artigoAutPrinc);
-        $inserir->bindValue(":eap", $artigoEmailAutPrinc);
+        $artigoPDO->bindValue(":t", $artigoTitulo);
+        $artigoPDO->bindValue(":n", $artigoNatureza);
+        $artigoPDO->bindValue(":ap", $artigoAutPrinc);
+        $artigoPDO->bindValue(":eap", $artigoEmailAutPrinc);
 
-        if($inserir->execute()) {
+        if($artigoPDO->execute()) {
             echo 
                 "<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous'>
                 <div class='p-2'>
@@ -38,7 +38,7 @@ try {
                 <p style='font-size: 18px;'>Um erro inesperado ocorreu!</p>
                 <a href='../../frontend/registrar.php' class='btn btn-outline-primary m-2'>HOME</a>";
         }
-    } catch(PDOExpection $e) {
+    } catch(PDOException $e) {
         echo "Surgiu um erro inesperado relacionado ao Banco de Dados: ".$e->getMessage();
     }
 ?>
