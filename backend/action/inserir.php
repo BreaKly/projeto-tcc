@@ -14,10 +14,10 @@ try {
         $artigo = $pdo->prepare("INSERT INTO artigo(Titulo, Natureza, AutPrinc, EmailAutPrinc) 
         VALUES(:t, :n, :ap, :eap)"); 
 
-        $artigoTitulo = $user->getTitulo();
-        $artigoNatureza = $user->getNatureza();
-        $artigoAutPrinc = $user->getAutPrinc();
-        $artigoEmailAutPrinc = $user->getEmailAutPrinc();
+        $artigoTitulo = $artigo->getTitulo();
+        $artigoNatureza = $artigo->getNatureza();
+        $artigoAutPrinc = $artigo->getAutPrinc();
+        $artigoEmailAutPrinc = $artigo->getEmailAutPrinc();
 
         $inserir->bindValue(":t", $artigoTitulo);
         $inserir->bindValue(":n", $artigoNatureza);
