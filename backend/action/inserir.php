@@ -39,7 +39,7 @@ try {
             echo 
                 "<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous'>
                 <p style='font-size: 18px;'>Um erro inesperado ocorreu!</p>
-                <a href='../../frontend/registrar.php' class='btn btn-outline-primary m-2'>HOME</a>";
+                <a href='../../frontend/addArtigo.php' class='btn btn-outline-primary m-2'>HOME</a>";
         }
     } catch(PDOException $e) {
         echo "Surgiu um erro inesperado relacionado ao Banco de Dados: ".$e->getMessage();

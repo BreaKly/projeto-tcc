@@ -19,7 +19,7 @@
             // <a href='../../frontend/registrar.php' class='btn btn-outline-primary'>HOME</a>
             // <a href='../../frontend/userLista.php' class='btn btn-outline-info' title='Função disponível apenas para administradores'>Lista usuários</a>
             // </div>";
-            header("refresh:0, ../../frontend/listaGeral")
+            header("refresh:0, ../../frontend/listaGeral");
         } else {
             echo "A conta do usuário ".$codProj." não foi excluída devido a problemas inesperados.";
         }
