@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Integrado</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <?php
@@ -32,7 +32,7 @@
             $modeloResponsavel = $sth->fetchAll(PDO::FETCH_CLASS, "responsavelModelo");
             $modeloTcc = $sth->fetchAll(PDO::FETCH_CLASS, "tccModelo");
 
-            echo "<a href='registrar.php' class='mt-2 ms-2 btn btn-primary' title='Home'><i class='fas fa-home'></i></a>";
+            echo "<a href='registrar.php' class='mt-2 ms-2 btn btn-dark' title='Home'><i class='fas fa-home'></i></a>";
 
             echo "<div class='p-2 table-responsive'>
                     <table class='table table-dark table-hover'>
