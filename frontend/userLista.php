@@ -18,30 +18,31 @@
             try {
             $conn = new Conexao("../backend/Conexao/configDB.ini");
             $pdo = $conn->getPDO();
-            $artigoModel = new artigoModelo();
+            $artigoModel = new ArtigoModelo();
             $coautModel = new coautModelo();
             $projetoModel = new projetoModelo();
             $responsavelModel = new tccModelo();
             $tccModel = new responsavelModelo();
             
-            $sth = $pdo->prepare("SELECT * FROM projeto;");
+            $sth = $pdo->prepare("SELECT * FROM artigo;");
             $sth->execute();
-            $modeloArtigo = $sth->fetchAll(PDO::FETCH_CLASS, "artigoModelo");
+            $modeloArtigo = $sth->fetchAll(PDO::FETCH_CLASS, "ArtigoModelo");
             $modeloCoaut = $sth->fetchAll(PDO::FETCH_CLASS, "coautModelo");
             $modeloProjeto = $sth->fetchAll(PDO::FETCH_CLASS, "projetoModelo");
             $modeloResponsavel = $sth->fetchAll(PDO::FETCH_CLASS, "responsavelModelo");
             $modeloTcc = $sth->fetchAll(PDO::FETCH_CLASS, "tccModelo");
-            
-                echo "<div class='p-2 table-responsive'>
-                        <table class='table table-dark table-hover'>
-                                <tr>
-                                    <th scope='col' class='text-center'>CÓDIGO DO PROJETO</th>
-                                    <th scope='col' class='text-center'>TÍTULO</th>
-                                    <th scope='col' class='text-center'>NATUREZA</th>
-                                    <th scope='col' class='text-center'>AUTOR PRINCIPAL</th>
-                                    <th scope='col' class='text-center'>EMAIL DO AUTOR PRINCIPAL</th>
-                                </tr>";
-                echo "<tr>";
+
+
+            echo "<div class='p-2 table-responsive'>
+                    <table class='table table-dark table-hover'>
+                            <tr>
+                                <th scope='col' class='text-center'>CÓDIGO DO PROJETO</th>
+                                <th scope='col' class='text-center'>TÍTULO</th>
+                                <th scope='col' class='text-center'>NATUREZA</th>
+                                <th scope='col' class='text-center'>AUTOR PRINCIPAL</th>
+                                <th scope='col' class='text-center'>EMAIL DO AUTOR PRINCIPAL</th>
+                                <th scope='col' class='text-center'>DELETAR</th>
+                            </tr>";
             foreach($modeloArtigo as $item){
                 echo "<tr>";
                 echo "<td class='text-center'>{$item->getCodArtigo()}</td>";
@@ -49,12 +50,11 @@
                 echo "<td class='text-center'>{$item->getNatureza()}</td>";
                 echo "<td class='text-center'>{$item->getAutPrinc()}</td>";
                 echo "<td class='text-center'>{$item->getEmailAutPrinc()}</td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getCodProj()}' class='btn btn-danger'>Apagar</a></td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getCodTitulo()}' class='btn btn-danger'>Apagar</a></td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getCodNatureza()}' class='btn btn-danger'>Apagar</a></td>";                    echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getCodAutPrinc()}' class='btn btn-danger'>Apagar</a></td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getEmailAutPrinc()}' class='btn btn-danger'>Apagar</a></td>";
+                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getCodArtigo()}' class='btn btn-danger'>Apagar</a></td>";
                 echo "</tr>";
-                            }
+            }
+            echo "</table>
+                    </div>";
                 echo "<div class='p-2 table-responsive'>
                         
                         <table class='table table-dark table-hover'>
@@ -70,8 +70,6 @@
                 echo "<td class='text-center'>{$item->getNome()}</td>";
                 echo "<td class='text-center'>{$item->getEmailCoautor()}</td>";
                 echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getCodArtigo()}' class='btn btn-danger'>Apagar</a></td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getNome()}' class='btn btn-danger'>Apagar</a></td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getEmailCoautor()}' class='btn btn-danger'>Apagar</a></td>";
                 echo "</tr>";
                 }
         
@@ -93,10 +91,6 @@
                 echo "<td class='text-center'>{$item->getDataFim()}</td>";
                 echo "<td class='text-center'>{$item->getSituAtual()}</td>";
                 echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getCodigo()}' class='btn btn-danger'>Apagar</a></td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getCodResp()}' class='btn btn-danger'>Apagar</a></td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getDataInicio()}' class='btn btn-danger'>Apagar</a></td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getDataFim()}' class='btn btn-danger'>Apagar</a></td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getSituAtual()}' class='btn btn-danger'>Apagar</a></td>";
                 echo "</tr>";
                 }
                 
@@ -112,7 +106,6 @@
                 echo "<td class='text-center'>{$item->getNome()}</td>";
                 echo "<td class='text-center'>{$item->getEmail()}</td>";
                 echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getNome()}' class='btn btn-danger'>Apagar</a></td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getEmail()}' class='btn btn-danger'>Apagar</a></td>";
                 echo "</tr>";
                 }
                 echo "<div class='p-2 table-responsive'>
@@ -131,10 +124,7 @@
                 echo "<td class='text-center'>{$item->getTituloTcc()}</td>";
                 echo "<td class='text-center'>{$item->getAutorTcc()}</td>";
                 echo "<td class='text-center'>{$item->getSituacao()}</td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getCodProj()}' class='btn btn-danger'>Apagar</a></td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getTituloTcc()}' class='btn btn-danger'>Apagar</a></td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getAutorTcc()}' class='btn btn-danger'>Apagar</a></td>";
-                echo "<td class='text-center'><a href='../backend/action/deletar.php?userNome={$item->getSituacao()}' class='btn btn-danger'>Apagar</a></td>";
+                echo "<td class='text-center'><a href='../backend/action/deletar.php?codProj={$item->getCodProj()}' class='btn btn-danger'>Apagar</a></td>";
                 echo "</tr>";
             }
             echo "</table>

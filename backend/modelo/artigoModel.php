@@ -1,44 +1,44 @@
 <?php
-    class artigoModelo {
-        private $codArtigo;
-        private $titulo;
-        private $natureza;
-        private $autPrinc;
-        private $emailautPrinc;
+    class ArtigoModelo {
+        private $CodArtigo;
+        private $Titulo;
+        private $Natureza;
+        private $AutPrinc;
+        private $EmailAutPrinc;
 
 
 
         public function setCodArtigo($codArtigo) {
-            $this->codArtigo = $codArtigo;
+            $this->CodArtigo = $codArtigo;
         }
         public function getCodArtigo() {
-            return $this->codArtigo;
+            return $this->CodArtigo;
         }
 
         public function setTitulo($titulo) {
-            $this->titulo = $titulo;
+            $this->Titulo = $titulo;
         }
         public function getTitulo() {
-            return $this->titulo;
+            return $this->Titulo;
         }
 
         public function setNatureza($natureza) {
-            $this->natureza = $natureza;
+            $this->Natureza = $natureza;
         }
         public function getNatureza() {
-            return $this->natureza;
+            return $this->Natureza;
         }
         public function setAutPrinc($autPrinc) {
-            $this->autPrinc = $autPrinc;
+            $this->AutPrinc = $autPrinc;
         }
         public function getAutPrinc() {
-            return $this->autPrinc;
+            return $this->AutPrinc;
         }
         public function setEmailAutPrinc($emailautPrinc) {
-            $this->emailautPrinc = $emailautPrinc;
+            $this->EmailautPrinc = $emailautPrinc;
         }
         public function getEmailAutPrinc() {
-            return $this->emailautPrinc;
+            return $this->EmailAutPrinc;
         }
 
 
