@@ -32,6 +32,7 @@
             $modeloResponsavel = $sth->fetchAll(PDO::FETCH_CLASS, "responsavelModelo");
             $modeloTcc = $sth->fetchAll(PDO::FETCH_CLASS, "tccModelo");
 
+            echo "<a href='registrar.php' class='mt-2 ms-2 btn btn-primary' title='Home'><i class='fas fa-home'></i></a>";
 
             echo "<div class='p-2 table-responsive'>
                     <table class='table table-dark table-hover'>
