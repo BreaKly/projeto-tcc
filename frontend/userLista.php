@@ -44,7 +44,7 @@
                 echo "<tr>";
             foreach($modeloArtigo as $item){
                 echo "<tr>";
-                echo "<td class='text-center'>{$item->getCodProj()}</td>";
+                echo "<td class='text-center'>{$item->getCodArtigo()}</td>";
                 echo "<td class='text-center'>{$item->getTitulo()}</td>";
                 echo "<td class='text-center'>{$item->getNatureza()}</td>";
                 echo "<td class='text-center'>{$item->getAutPrinc()}</td>";

@@ -1,6 +1,6 @@
 <?php
 require_once('../Conexao/Conexao.class.php');
-require_once('../modelo/userModel.php');
+require_once('../modelo/artigoModel.php');
 try {
         $conn = new Conexao("../Conexao/configDB.ini");
         $pdo = $conn->getPDO();
@@ -11,7 +11,7 @@ try {
         $artigo->setAutPrinc(($_POST['autPrinc']));
         $artigo->setEmailAutPrinc(($_POST['emailAutPrinc']));
 
-        $inserir = $pdo->prepare("INSERT INTO artigo(Titulo, Natureza, AutPrinc, EmailAutPrinc) 
+        $artigo = $pdo->prepare("INSERT INTO artigo(Titulo, Natureza, AutPrinc, EmailAutPrinc) 
         VALUES(:t, :n, :ap, :eap)"); 
 
         $artigoTitulo = $user->getTitulo();

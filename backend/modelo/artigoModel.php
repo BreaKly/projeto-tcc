@@ -1,6 +1,6 @@
 <?php
     class artigoModelo {
-        private $codProj;
+        private $codArtigo;
         private $titulo;
         private $natureza;
         private $autPrinc;
@@ -8,11 +8,11 @@
 
 
 
-        public function setCodProj($codProj) {
-            $this->codProj = $codProj;
+        public function setCodArtigo($codArtigo) {
+            $this->codArtigo = $codArtigo;
         }
-        public function getCodProj() {
-            return $this->codProj;
+        public function getCodArtigo() {
+            return $this->codArtigo;
         }
 
         public function setTitulo($titulo) {
