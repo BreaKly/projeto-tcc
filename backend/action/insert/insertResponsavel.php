@@ -12,6 +12,8 @@ try {
         $artigoPDO = $pdo->prepare("INSERT INTO responsavel(Nome, Email) 
         VALUES(:n, :e)"); 
 
+        echo $responsavel->getNome();
+
         $responsavelNome = $responsavel->getNome();
         $responsavelEmail = $responsavel->getEmail();
 
