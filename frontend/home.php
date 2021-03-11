@@ -10,7 +10,7 @@
     <div class="d-flex vh-100">
         <div id='title-box' class='w-50 d-flex justify-content-center align-items-center'>
             <div id='title-text' class='justify-content-center align-items-center flex-column overflow-hidden' style=''>
-                <h1 id='cad' class='h1 fw-bolder m-0' style='width:220px; animation:cad 2.4s ease;'>CADASTRO DE TCC</h1>
+                <h1 id='cad' class='h1 fw-bolder m-0' style='width:220px; animation:cad 1.4s ease;'>CADASTRO DE TCC</h1>
                 <p id='atual'>cadastre-o, atualize-o.</p>
             </div>
         </div>

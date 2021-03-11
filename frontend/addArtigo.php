@@ -6,10 +6,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/simpleAnimation.css">
 </head>
-<body>
-    <div class="d-flex vh-100">
-        <div class='w-100 d-flex justify-content-center align-items-center flex-column'>
-            <h1 id='cad' class='h2 fw-bolder ps-3 mb-2'>CADASTRO DE ARTIGOS</h1>
+<body class="d-flex vh-100">
+    <div class='w-100 d-flex justify-content-center align-items-center flex-column'>
+        <div>
+            <div>
+                <h1 id='cad' class='h2 fw-bolder mb-2'>CADASTRO DE ARTIGOS</h1>
+            </div>
             <form enctype='multipart/form-data' action='../backend/action/inserir.php' method='post'>
                 <div class='form-div form-floating mb-3'>
                     <input type='text' class='form-control' id='titulo' name='titulo' placeholder='Título' style='outline: none;' required>
