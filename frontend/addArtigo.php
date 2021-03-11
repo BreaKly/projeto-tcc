@@ -12,7 +12,7 @@
             <div>
                 <h1 id='cad' class='h2 fw-bolder mb-2'>CADASTRO DE ARTIGOS</h1>
             </div>
-            <form enctype='multipart/form-data' action='../backend/action/inserir.php' method='post'>
+            <form enctype='multipart/form-data' action='../backend/action/insert/inserir.php' method='post'>
                 <div class='form-div form-floating mb-3'>
                     <input type='text' class='form-control' id='titulo' name='titulo' placeholder='Título' style='outline: none;' required>
                     <label for='titulo'>Título</label>
