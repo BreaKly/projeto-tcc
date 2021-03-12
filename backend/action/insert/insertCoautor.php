@@ -1,9 +1,8 @@
 <?php
-require_once('../Conexao/Conexao.class.php');
-require_once('../modelo/artigoModel.php');
-require_once('../modelo/coautModel.php');
+require_once('../../Conexao/Conexao.class.php');
+require_once('../../modelo/coautModel.php');
 try {
-        $conn = new Conexao("../Conexao/configDB.ini");
+        $conn = new Conexao("../../Conexao/configDB.ini");
         $pdo = $conn->getPDO();
         $coautor = new CoautModelo();
 
@@ -12,16 +11,16 @@ try {
         $coautor->setEmailCoaut($_POST['Email Co-Autor']);
 
         $coautorPDO = $pdo->prepare("INSERT INTO coautor(CodArtig, Nome, EmailCoaut) 
-        VALUES(:t, :n, :ap, :eap)"); 
+        VALUES(:ca, :n, :e)"); 
 
         $coautorCodArtig = $coautor->getCodArtig();
         $coautorNome = $coautor->getNome();
         $coautorEmailCoaut = $coautor->getEmailCoaut();
 
 
-        $coautorPDO->bindValue(":t", $coautorCodArtig);
+        $coautorPDO->bindValue(":ca", $coautorCodArtig);
         $coautorPDO->bindValue(":n", $coautorNome);
-        $coautorPDO->bindValue(":ap", $coautorEmailCoaut);
+        $coautorPDO->bindValue(":e", $coautorEmailCoaut);
         
 
         if($artigoPDO->execute()) {

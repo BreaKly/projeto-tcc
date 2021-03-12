@@ -15,9 +15,9 @@ try {
         VALUES(:cp, :t, :a, :s)"); 
 
         $tccCodProj = $tcc->getCodProj();
-        $tccTitulo = $artigo->getTituloTCC();
-        $tccAutor = $artigo->getAutorTCC();
-        $tccSituacao = $artigo->getSituacao();
+        $tccTitulo = $tcc->getTituloTCC();
+        $tccAutor = $tcc->getAutorTCC();
+        $tccSituacao = $tcc->getSituacao();
 
         $tccPDO->bindValue(":cp", $tccCodProj);
         $tccPDO->bindValue(":t", $tccTitulo);
