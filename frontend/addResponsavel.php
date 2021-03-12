@@ -22,13 +22,15 @@
                     <input type='email' class='form-control' id='userEmail' name='email' placeholder='nome@exemplo.com' required>
                     <label for='userEmail'>Endereço de e-mail do responsável</label>
                 </div>
+                <div>
                     <button type="submit" class='w-100 float-end btn btn-primary'>
-                        <i class="fas fa-user-plus"></i>   CADASTRAR
+                        <i class="fas fa-user-plus"></i>   CADASTRAR NOVO RESPONSÁVEL
                     </button>
-                    <a href='userLista.php' class='btn btn-outline-secondary w-100 mt-2' title='Função disponível apenas para administradores'>
-                        <i class="fas fa-users"></i>   LISTA DE USUÁRIOS
+                    <a href='home.php' class='mt-2 btn btn-secondary w-100' title='Home'><i class='fas fa-home'></i> HOME</a>
+                    <a href='listaGeral.php' class='btn btn-outline-secondary w-100 mt-2' title='Função disponível apenas para administradores'>
+                        <i class="fas fa-users"></i>   LISTA DOS RESPONSÁVEIS
                     </a>     
-                </div>   
+                </div>  
             </form>
         </div>
     </div>

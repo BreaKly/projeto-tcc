@@ -6,8 +6,6 @@
         private $DataFim;
         private $SituAtual;
     
- 
-
         public function setCodProj($codProj) {
             $this->CodProj = $codProj;
         }
