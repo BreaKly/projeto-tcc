@@ -47,6 +47,7 @@
 
             echo "<div class='p-2 table-responsive'>
                     <table class='table table-dark table-hover'>
+                        <caption>ARTIGOS</caption>
                         <tr>
                             <th scope='col' class='text-center'>ARTIGOS</th>
                         </tr>
