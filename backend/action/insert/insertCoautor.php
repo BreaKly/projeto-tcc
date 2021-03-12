@@ -5,23 +5,23 @@ require_once('../modelo/coautModel.php');
 try {
         $conn = new Conexao("../Conexao/configDB.ini");
         $pdo = $conn->getPDO();
-        $coaut = new CoautModelo();
+        $coautor = new CoautModelo();
 
-        $coautor->setCodArtig($_POST['titulo']);
+        $coautor->setCodArtig($_POST['Código do Artigo']);
         $coautor->setNome($_POST['Nome do Co-Autor']);
         $coautor->setEmailCoaut($_POST['Email Co-Autor']);
 
-        $artigoPDO = $pdo->prepare("INSERT INTO coautor(CodArtig, Nome, EmailCoaut) 
+        $coautorPDO = $pdo->prepare("INSERT INTO coautor(CodArtig, Nome, EmailCoaut) 
         VALUES(:t, :n, :ap, :eap)"); 
 
-        $artigoTitulo = $artigo->getTitulo();
-        $artigoNatureza = $artigo->getNatureza();
-        $artigoAutPrinc = $artigo->getAutPrinc();
+        $coautorCodArtig = $coautor->getCodArtig();
+        $coautorNome = $coautor->getNome();
+        $coautorEmailCoaut = $coautor->getEmailCoaut();
 
 
-        $artigoPDO->bindValue(":t", $artigoTitulo);
-        $artigoPDO->bindValue(":n", $artigoNatureza);
-        $artigoPDO->bindValue(":ap", $artigoAutPrinc);
+        $coautorPDO->bindValue(":t", $coautorCodArtig);
+        $coautorPDO->bindValue(":n", $coautorNome);
+        $coautorPDO->bindValue(":ap", $coautorEmailCoaut);
         
 
         if($artigoPDO->execute()) {
