@@ -12,7 +12,7 @@
             <div>
                 <h1 id='cad' class='h2 fw-bolder mb-2'>CADASTRO DE CO-AUTOR</h1>
             </div>
-            <form enctype='multipart/form-data' action='../backend/action/insert/insertCoaut.php' method='post'>
+            <form enctype='multipart/form-data' action='../backend/action/insert/insertCoautor.php' method='post'>
                 <div class='form-div form-floating mb-3'>
                     <input type='text' class='form-control' id='codArtigo' name='codArtigo' placeholder='Título' style='outline: none;' required>
                     <label for='codArtigo'>Código do artigo</label>
