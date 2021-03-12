@@ -47,7 +47,7 @@
 
             echo "<div class='p-2 table-responsive'>
                     <div class='w-100 d-flex justify-content-center align-items-center' style='background-color:#212529;'>
-                        <h3 style='color:#fff;'>ARTIGOS</h3>
+                        <h4 style='color:#fff;'>ARTIGOS</h4>
                     </div>
                     <table class='table table-dark table-hover'>
                         <tr>
@@ -72,10 +72,10 @@
             echo "</table>
                 </div>";
             echo "<div class='p-2 table-responsive'>
+                    <div class='w-100 d-flex justify-content-center align-items-center' style='background-color:#212529;'>
+                        <h4 style='color:#fff;'>CO-AUTORES</h4>
+                    </div>
                     <table class='table table-dark table-hover'>
-                        <tr>
-                            <th scope='col' class='text-center'>CO-AUTORES</th>
-                        </tr>
                         <tr>
                             <th scope='col' class='text-center'>CÓDIGO DO ARTIGO</th>
                             <th scope='col' class='text-center'>NOME DO COAUTOR</th>
@@ -94,10 +94,10 @@
             echo "</table>
                 </div>";
             echo "<div class='p-2 table-responsive'>
+                    <div class='w-100 d-flex justify-content-center align-items-center' style='background-color:#212529;'>
+                        <h4 style='color:#fff;'>PROJETOS</h4>
+                    </div>
                     <table class='table table-dark table-hover'>
-                        <tr>
-                            <th scope='col' class='text-center'>PROJETOS</th>
-                        </tr>
                         <tr>
                             <th scope='col' class='text-center'>CÓDIGO</th>
                             <th scope='col' class='text-center'>CÓDIGO DO RESPONSÁVEL</th>
@@ -120,10 +120,10 @@
             echo "</table>
                 </div>";
             echo "<div class='p-2 table-responsive'>
+                <div class='w-100 d-flex justify-content-center align-items-center' style='background-color:#212529;'>
+                        <h4 style='color:#fff;'>RESPONSÁVEIS</h4>
+                    </div>
                     <table class='table table-dark table-hover'>
-                        <tr>
-                            <th scope='col' class='text-center'>RESPONSÁVEIS</th>
-                        </tr>
                         <tr>
                             <th scope='col' class='text-center'>NOME DO RESPONSÁVEL</th>
                             <th scope='col' class='text-center'>EMAIL DO RESPONSÁVEL</th>
@@ -140,10 +140,10 @@
             echo "</table>
                 </div>";
             echo "<div class='p-2 table-responsive'>
+                    <div class='w-100 d-flex justify-content-center align-items-center' style='background-color:#212529;'>
+                        <h4 style='color:#fff;'>TCC</h4>
+                    </div>
                     <table class='table table-dark table-hover'>
-                        <tr>
-                            <th scope='col' class='text-center'>TCC</th>
-                        </tr>
                         <tr>
                             <th scope='col' class='text-center'>CÓDIGO DO PROJETO</th>
                             <th scope='col' class='text-center'>TÍTULO TCC</th>
