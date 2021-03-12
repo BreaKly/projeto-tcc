@@ -10,7 +10,7 @@
         $comando = $pdo->prepare('DELETE FROM artigo WHERE CodArtigo=:n');
         $comando->bindValue(":n", $codArtigo);
         if($comando->execute()) {
-            header("refresh:0, ../../frontend/listaGeral");
+            header("refresh:0, ../../../frontend/listaGeral");
         } else {
             echo "O Artigo ".$codArtigo." não foi excluída devido a problemas inesperados.";
         }
