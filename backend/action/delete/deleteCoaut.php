@@ -1,6 +1,6 @@
 <?php
     require_once('../../Conexao/Conexao.class.php');
-    require_once('../../modelo/artigoModel.php');
+    require_once('../../modelo/coautModel.php');
     try {
         $conn = new Conexao("../../Conexao/configDB.ini");
         $pdo = $conn->getPDO();
