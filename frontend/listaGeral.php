@@ -47,7 +47,7 @@
 
             echo "<div class='p-2 table-responsive'>
                     <div class='w-100 d-flex justify-content-center align-items-center'>
-                        <h2>ARTIGOS</h2>
+                        <h2 class='dark'>ARTIGOS</h2>
                     </div>
                     <table class='table table-dark table-hover'>
                         <tr>
