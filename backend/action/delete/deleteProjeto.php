@@ -1,18 +1,18 @@
 <?php
-    require_once('../Conexao/Conexao.class.php');
-    require_once('../modelo/artigoModel.php');
+    require_once('../../Conexao/Conexao.class.php');
+    require_once('../../modelo/projetoModel.php');
     try {
-        $conn = new Conexao("../Conexao/configDB.ini");
+        $conn = new Conexao("../../Conexao/configDB.ini");
         $pdo = $conn->getPDO();
         
-        $codArtigo = $_GET['codArtigo'];
+        $codProj = $_GET['codProj'];
 
-        $comando = $pdo->prepare('DELETE FROM artigo WHERE CodArtigo=:n');
-        $comando->bindValue(":n", $codArtigo);
+        $comando = $pdo->prepare('DELETE FROM projeto WHERE CodProj=:cp');
+        $comando->bindValue(":cp", $codProj);
         if($comando->execute()) {
-            header("refresh:0, ../../frontend/listaGeral");
+            header("refresh:0, ../../../frontend/listaGeral");
         } else {
-            echo "A conta do usuário ".$codProj." não foi excluída devido a problemas inesperados.";
+            echo "O Projeto ".$codProj." não foi excluída devido a problemas inesperados.";
         }
 
 
