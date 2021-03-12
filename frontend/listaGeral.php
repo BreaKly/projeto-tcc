@@ -46,13 +46,10 @@
             echo "<a href='home.php' class='mt-2 ms-2 btn btn-dark' title='Home'><i class='fas fa-home'></i></a>";
 
             echo "<div class='p-2 table-responsive'>
-                    <div class='w-100 d-flex justify-content-center align-items-center'>
-                        <h2 class='dark'>ARTIGOS</h2>
+                    <div class='w-100 d-flex justify-content-center align-items-center dark'>
+                        <h2>ARTIGOS</h2>
                     </div>
                     <table class='table table-dark table-hover'>
-                        <tr>
-                            <th scope='col' class='text-center'>ARTIGOS</th>
-                        </tr>
                         <tr>
                             <th scope='col' class='text-center'>CÓDIGO DO PROJETO</th>
                             <th scope='col' class='text-center'>TÍTULO</th>
