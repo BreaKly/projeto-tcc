@@ -1,8 +1,8 @@
 <?php
-require_once('../Conexao/Conexao.class.php');
-require_once('../modelo/artigoModel.php');
+require_once('../../Conexao/Conexao.class.php');
+require_once('../../modelo/artigoModel.php');
 try {
-        $conn = new Conexao("../Conexao/configDB.ini");
+        $conn = new Conexao("../../Conexao/configDB.ini");
         $pdo = $conn->getPDO();
         $artigo = new ArtigoModelo();
 
