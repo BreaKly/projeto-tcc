@@ -47,7 +47,7 @@
 
             echo "<div class='p-2 table-responsive'>
                     <div class='w-100 d-flex justify-content-center align-items-center' style='background-color:#212529;'>
-                        <h3>ARTIGOS</h3>
+                        <h3 style='color:#fff;'>ARTIGOS</h3>
                     </div>
                     <table class='table table-dark table-hover'>
                         <tr>
