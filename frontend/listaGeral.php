@@ -82,7 +82,7 @@
                                 <td class='text-center'>{$item->getCodArtig()}</td>
                                 <td class='text-center'>{$item->getNome()}</td>
                                 <td class='text-center'>{$item->getEmailCoaut()}</td>
-                                <td class='text-center'><a href='../backend/action/deleteCoaut.php?nomeCoaut={$item->getNome()}' class='btn btn-danger'>Deletar</a></td>
+                                <td class='text-center'><a href='../backend/action/delete/deleteCoaut.php?nomeCoaut={$item->getNome()}' class='btn btn-danger'>Deletar</a></td>
                         </tr>";
                     }
             echo "</table>
