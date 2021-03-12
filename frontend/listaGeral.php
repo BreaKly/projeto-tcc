@@ -77,7 +77,7 @@
                             <th scope='col' class='text-center'>DELETAR</th>
                         </tr>
                         <tr>";
-                    foreach($modeloCoAut as $item){                      
+                    foreach($modeloCoAutor as $item){                      
                         echo "<tr>
                                 <td class='text-center'>{$item->getCodArtig()}</td>
                                 <td class='text-center'>{$item->getNome()}</td>
