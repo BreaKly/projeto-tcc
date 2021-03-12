@@ -7,8 +7,8 @@ try {
         $coautor = new CoautModelo();
 
         $coautor->setCodArtig($_POST['codArtigo']);
-        $coautor->setNome($_POST['nomeCoat']);
-        $coautor->setEmailCoaut($_POST['emailCoat']);
+        $coautor->setNome($_POST['nomeCoaut']);
+        $coautor->setEmailCoaut($_POST['emailCoaut']);
 
         $coautorPDO = $pdo->prepare("INSERT INTO coautor(CodArtig, Nome, EmailCoaut) 
         VALUES(:ca, :n, :e)"); 
