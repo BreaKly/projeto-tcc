@@ -12,7 +12,7 @@
             <div>
                 <h1 id='cad' class='h2 fw-bolder mb-2'>CADASTRO DE PROJETO</h1>
             </div>
-            <form enctype='multipart/form-data' action='../backend/action/insert/insertTcc.php' method='post'>
+            <form enctype='multipart/form-data' action='../backend/action/insert/insertProjeto.php' method='post'>
                 <div class='form-div form-floating mb-3'>
                     <input type='text' class='form-control' id='codProj' name='codProj' placeholder='Código do Projeto' style='outline: none;' required>
                     <label for='codProj'>Código do Projeto</label>
