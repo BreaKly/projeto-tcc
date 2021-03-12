@@ -63,7 +63,7 @@
                                 <td class='text-center'>{$item->getNatureza()}</td>
                                 <td class='text-center'>{$item->getAutPrinc()}</td>
                                 <td class='text-center'>{$item->getEmailAutPrinc()}</td>
-                                <td class='text-center'><a href='../backend/action/delete/deleteArtigo.php?codArtigo={$item->getCodArtigo()}' class='btn btn-danger'>Apagar</a></td>
+                                <td class='text-center'><a href='../backend/action/delete/deleteArtigo.php?codArtigo={$item->getCodArtigo()}' class='btn btn-danger'>Deletar</a></td>
                         </tr>";
                     }   
             echo "</table>
@@ -82,7 +82,7 @@
                                 <td class='text-center'>{$item->getCodArtig()}</td>
                                 <td class='text-center'>{$item->getNome()}</td>
                                 <td class='text-center'>{$item->getEmailCoaut()}</td>
-                                <td class='text-center'><a href='../backend/action/deleteCoaut.php?nomeCoaut={$item->getNome()}' class='btn btn-danger'>Apagar</a></td>
+                                <td class='text-center'><a href='../backend/action/deleteCoaut.php?nomeCoaut={$item->getNome()}' class='btn btn-danger'>Deletar</a></td>
                         </tr>";
                     }
             echo "</table>
@@ -105,7 +105,7 @@
                             <td class='text-center'>{$item->getDataInicio()}</td>
                             <td class='text-center'>{$item->getDataFim()}</td>
                             <td class='text-center'>{$item->getSituAtual()}</td>
-                            <td class='text-center'><a href='../backend/action/delete/deleteProjeto.php?codProj={$item->getCodProj()}' class='btn btn-danger'>Apagar</a></td>
+                            <td class='text-center'><a href='../backend/action/delete/deleteProjeto.php?codProj={$item->getCodProj()}' class='btn btn-danger'>Deletar</a></td>
                         </tr>";
                     }
             echo "</table>
@@ -122,7 +122,7 @@
                         echo "<tr>               
                             <td class='text-center'>{$item->getNome()}</td>
                             <td class='text-center'>{$item->getEmail()}</td>
-                            <td class='text-center'><a href='../backend/action/delete/deleteResponsavel.php?nomeResp={$item->getNome()}' class='btn btn-danger'>Apagar</a></td>
+                            <td class='text-center'><a href='../backend/action/delete/deleteResponsavel.php?nomeResp={$item->getNome()}' class='btn btn-danger'>Deletar</a></td>
                         </tr>";
                     }
             echo "</table>
@@ -143,7 +143,7 @@
                             <td class='text-center'>{$item->getTituloTCC()}</td>
                             <td class='text-center'>{$item->getAutorTCC()}</td>
                             <td class='text-center'>{$item->getSituacao()}</td>
-                            <td class='text-center'><a href='../backend/action/delete/deleteTcc.php?tituloTcc={$item->getTituloTCC()}' class='btn btn-danger'>Apagar</a></td>
+                            <td class='text-center'><a href='../backend/action/delete/deleteTcc.php?tituloTcc={$item->getTituloTCC()}' class='btn btn-danger'>Deletar</a></td>
                         </tr>";
                     }
             echo "</table>
