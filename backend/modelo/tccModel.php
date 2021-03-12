@@ -1,5 +1,5 @@
 <?php
-    class tccModelo {
+    class TccModelo {
         private $CodProj;
         private $TituloTCC;
         private $AutorTCC;

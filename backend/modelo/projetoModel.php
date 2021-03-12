@@ -1,5 +1,5 @@
 <?php
-    class projetoModelo {
+    class ProjetoModelo {
         private $CodProj;
         private $CodResp;
         private $DataInicio;

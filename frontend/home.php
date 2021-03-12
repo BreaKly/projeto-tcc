@@ -15,10 +15,10 @@
             </div>
         </div>
         <div class='w-50 d-flex justify-content-center align-items-center flex-column'>
-            <a class='btn btn-primary w-50 m-1' href='addArtigo.php'>TCC</a>
+            <a class='btn btn-primary w-50 m-1' href='addTcc.php'>TCC</a>
             <a class='btn btn-primary w-50 m-1' href='addResponsavel.php'>Responsáveis</a>
             <a class='btn btn-primary w-50 m-1' href='addArtigo.php'>Artigos</a>
-            <a class='btn btn-primary w-50 m-1' href='addArtigo.php'>Projetos</a>
+            <a class='btn btn-primary w-50 m-1' href='addProjeto.php'>Projetos</a>
             <a class='btn btn-primary w-50 m-1' href='addCoaut.php'>Co-Autor</a>
             
 
