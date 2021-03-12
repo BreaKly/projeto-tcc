@@ -17,7 +17,6 @@ try {
         $coautorNome = $coautor->getNome();
         $coautorEmailCoaut = $coautor->getEmailCoaut();
 
-
         $coautorPDO->bindValue(":ca", $coautorCodArtig);
         $coautorPDO->bindValue(":n", $coautorNome);
         $coautorPDO->bindValue(":e", $coautorEmailCoaut);

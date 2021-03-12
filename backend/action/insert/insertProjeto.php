@@ -5,28 +5,28 @@ require_once('../modelo/coautModel.php');
 try {
         $conn = new Conexao("../Conexao/configDB.ini");
         $pdo = $conn->getPDO();
-        $artigo = new ArtigoModelo();
-        $coaut = new CoautModelo();
+        $projeto = new projetoModelo();
 
-        $artigo->setTitulo($_POST['titulo']);
-        $artigo->setNatureza($_POST['natureza']);
-        $artigo->setAutPrinc($_POST['autPrinc']);
-        $artigo->setEmailAutPrinc($_POST['emailAutPrinc']);
+        $projeto->setCodProj($_POST['Código Do Projeto']);
+        $projeto->setCodResp($_POST['Código Do Responsável']);
+        $projeto->setDataInicio($_POST['Data De Início']);
+        $projeto->setDataFim($_POST['Data De Fim']);
+        $projeto->setSituAtual($_POST['Situação Atual']);
 
-        $artigoPDO = $pdo->prepare("INSERT INTO projeto(CodProj, CodResp, DataInicio, DataFim, SituAtual) 
+        $projetoPDO = $pdo->prepare("INSERT INTO projeto(CodProj, CodResp, DataInicio, DataFim, SituAtual) 
         VALUES(:t, :n, :ap, :eap)"); 
 
-        $artigoTitulo = $artigo->getTitulo();
-        $artigoNatureza = $artigo->getNatureza();
-        $artigoAutPrinc = $artigo->getAutPrinc();
-        $artigoEmailAutPrinc = $artigo->getEmailAutPrinc();
+        $projetoCodProj = $projeto->getCodProj();
+        $projetoCodResp = $projeto->getCodResp();
+        $projetoDataInicio = $projeto->getDataInicio();
+        $projetoDataFim = $projeto->getDataFim();
+        $projetoSituAtual = $projeto->getSituAtual();
 
-
-        $artigoPDO->bindValue(":t", $artigoTitulo);
-        $artigoPDO->bindValue(":n", $artigoNatureza);
-        $artigoPDO->bindValue(":ap", $artigoAutPrinc);
-        $artigoPDO->bindValue(":eap", $artigoEmailAutPrinc);
-
+        $projetoPDO->bindValue(":t", $projetoCodProj);
+        $projetoPDO->bindValue(":n", $projetoCodResp);
+        $projetoPDO->bindValue(":ap", $projetoDataInicio);
+        $projetoPDO->bindValue(":eap", $projetoDataFim);
+        $projetoPDO->bindValue(":eap", $projetoSituAtual);
         if($artigoPDO->execute()) {
             echo 
                 "<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous'>

@@ -6,8 +6,6 @@
         private $AutPrinc;
         private $EmailAutPrinc;
 
-
-
         public function setCodArtigo($codArtigo) {
             $this->CodArtigo = $codArtigo;
         }
