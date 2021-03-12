@@ -48,6 +48,9 @@
             echo "<div class='p-2 table-responsive'>
                     <table class='table table-dark table-hover'>
                         <tr>
+                            <th scope='col' class='text-center'>ARTIGOS</th>
+                        </tr>
+                        <tr>
                             <th scope='col' class='text-center'>CÓDIGO DO PROJETO</th>
                             <th scope='col' class='text-center'>TÍTULO</th>
                             <th scope='col' class='text-center'>NATUREZA</th>
@@ -71,6 +74,9 @@
             echo "<div class='p-2 table-responsive'>
                     <table class='table table-dark table-hover'>
                         <tr>
+                            <th scope='col' class='text-center'>CO-AUTORES</th>
+                        </tr>
+                        <tr>
                             <th scope='col' class='text-center'>CÓDIGO DO ARTIGO</th>
                             <th scope='col' class='text-center'>NOME DO COAUTOR</th>
                             <th scope='col' class='text-center'>EMAIL DO CO AUTOR</th>
@@ -89,6 +95,9 @@
                 </div>";
             echo "<div class='p-2 table-responsive'>
                     <table class='table table-dark table-hover'>
+                        <tr>
+                            <th scope='col' class='text-center'>PROJETOS</th>
+                        </tr>
                         <tr>
                             <th scope='col' class='text-center'>CÓDIGO</th>
                             <th scope='col' class='text-center'>CÓDIGO DO RESPONSÁVEL</th>
@@ -113,6 +122,9 @@
             echo "<div class='p-2 table-responsive'>
                     <table class='table table-dark table-hover'>
                         <tr>
+                            <th scope='col' class='text-center'>RESPONSÁVEIS</th>
+                        </tr>
+                        <tr>
                             <th scope='col' class='text-center'>NOME DO RESPONSÁVEL</th>
                             <th scope='col' class='text-center'>EMAIL DO RESPONSÁVEL</th>
                             <th scope='col' class='text-center'>DELETAR</th>
@@ -129,6 +141,9 @@
                 </div>";
             echo "<div class='p-2 table-responsive'>
                     <table class='table table-dark table-hover'>
+                        <tr>
+                            <th scope='col' class='text-center'>TCC</th>
+                        </tr>
                         <tr>
                             <th scope='col' class='text-center'>CÓDIGO DO PROJETO</th>
                             <th scope='col' class='text-center'>TÍTULO TCC</th>
