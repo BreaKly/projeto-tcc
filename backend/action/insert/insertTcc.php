@@ -29,9 +29,9 @@ try {
                 "<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous'>
                 <div class='p-2'>
                 </p style='font-size: 18px;'>Foi feito o cadastro do artigo com sucesso. Voltando automaticamente.</p>
-                <a href='../../frontend/listaGeral.php' class='btn btn-outline-primary'>Listagem geral</a>
+                <a href='../../../frontend/listaGeral.php' class='btn btn-outline-primary'>Listagem geral</a>
                 </div>";
-            header("refresh:3, ../../frontend/registrar.php");
+            header("refresh:3, ../../frontend/home.php");
         } else {
             echo 
                 "<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous'>
