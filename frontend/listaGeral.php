@@ -46,8 +46,10 @@
             echo "<a href='home.php' class='mt-2 ms-2 btn btn-dark' title='Home'><i class='fas fa-home'></i></a>";
 
             echo "<div class='p-2 table-responsive'>
+                    <div class='w-100 d-flex justify-content-center align-items-center'>
+                        <h2>ARTIGOS</h2>
+                    </div>
                     <table class='table table-dark table-hover'>
-                        <caption>ARTIGOS</caption>
                         <tr>
                             <th scope='col' class='text-center'>ARTIGOS</th>
                         </tr>
