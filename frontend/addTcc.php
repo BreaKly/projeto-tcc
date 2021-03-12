@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/simpleAnimation.css">
 </head>
 <body class="d-flex vh-100">
-<div class='w-100 d-flex justify-content-center align-items-center flex-column'>
+    <div class='w-100 d-flex justify-content-center align-items-center flex-column'>
         <div>
             <div>
                 <h1 id='cad' class='h2 fw-bolder mb-2'>CADASTRO DE TCC</h1>
