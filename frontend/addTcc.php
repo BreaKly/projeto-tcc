@@ -26,7 +26,7 @@
                     <label for='autor'>Autor do TCC</label>
                 </div>
                 <div class='form-div mb-3'>
-                    <select class="form-select mb-3" name='natureza'>
+                    <select class="form-select mb-3" name='situacao'>
                         <option selected value='EM DESENVOLVIMENTO'>EM DESENVOLVIMENTO</option>
                         <option value="DEFENDIDO">DEFENDIDO</option>
                         <option value="ABANDONADO">ABANDONADO</option>

@@ -1,33 +1,30 @@
 <?php
-require_once('../Conexao/Conexao.class.php');
-require_once('../modelo/artigoModel.php');
-require_once('../modelo/coautModel.php');
+require_once('../../Conexao/Conexao.class.php');
+require_once('../../modelo/tccModel.php');
 try {
-        $conn = new Conexao("../Conexao/configDB.ini");
+        $conn = new Conexao("../../Conexao/configDB.ini");
         $pdo = $conn->getPDO();
-        $artigo = new ArtigoModelo();
-        $coaut = new CoautModelo();
+        $tcc = new TccModelo();
 
-        $artigo->setTitulo($_POST['titulo']);
-        $artigo->setNatureza($_POST['natureza']);
-        $artigo->setAutPrinc($_POST['autPrinc']);
-        $artigo->setEmailAutPrinc($_POST['emailAutPrinc']);
+        $tcc->setCodProj($_POST['codProj']);
+        $tcc->setTituloTCC($_POST['titulo']);
+        $tcc->setAutorTCC($_POST['autor']);
+        $tcc->setSituacao($_POST['situacao']);
 
-        $artigoPDO = $pdo->prepare("INSERT INTO tcc(CodProj, TituloTCC, AutorTCC, Situacao) 
-        VALUES(:t, :n, :ap, :eap)"); 
+        $tccPDO = $pdo->prepare("INSERT INTO tcc(CodProj, TituloTCC, AutorTCC, Situacao) 
+        VALUES(:cp, :t, :a, :s)"); 
 
-        $artigoTitulo = $artigo->getTitulo();
-        $artigoNatureza = $artigo->getNatureza();
-        $artigoAutPrinc = $artigo->getAutPrinc();
-        $artigoEmailAutPrinc = $artigo->getEmailAutPrinc();
+        $tccCodProj = $tcc->getCodProj();
+        $tccTitulo = $artigo->getTituloTCC();
+        $tccAutor = $artigo->getAutorTCC();
+        $tccSituacao = $artigo->getSituacao();
 
+        $tccPDO->bindValue(":cp", $tccCodProj);
+        $tccPDO->bindValue(":t", $tccTitulo);
+        $tccPDO->bindValue(":a", $tccAutor);
+        $tccPDO->bindValue(":s", $tccSituacao);
 
-        $artigoPDO->bindValue(":t", $artigoTitulo);
-        $artigoPDO->bindValue(":n", $artigoNatureza);
-        $artigoPDO->bindValue(":ap", $artigoAutPrinc);
-        $artigoPDO->bindValue(":eap", $artigoEmailAutPrinc);
-
-        if($artigoPDO->execute()) {
+        if($tccPDO->execute()) {
             echo 
                 "<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous'>
                 <div class='p-2'>
